@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="sk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Juraj Povinec</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Učenie posilňovaním v doméne hier</h1>
+                <section id="contact-info">
+                    <h2>Kontakt</h2>
+                    <p>
+                        Študent: Juraj Povinec (<a
+                            href="mailto:povinec5@uniba.sk"
+                            >povinec5@uniba.sk</a
+                        >)
+                    </p>
+                    <p>Školiteľ: doc. Ing. Peter Lacko, PhD</p>
+                </section>
+            </header>
+
+            <section id="thesis-assignment">
+                <h2>Zadanie</h2>
+                <h3>Anotácia</h3>
+                <p>
+                    Hlboké architektúry neurónových sietí preukázali schopnosť
+                    napodobňovať ľudí pri rôznych úlohách (rozpoznávanie obrazu,
+                    opis scény, alebo hranie hier). Veľký nárast výkonu
+                    grafických čipov nám umožňuje vytvárať a trénovať hlbšie a
+                    zložitejšie architektúry, ktoré zvyšujú úspešnosť umelých
+                    neurónových sietí. Učenie posilňovaním získava popularitu v
+                    doméne umelej intelligence. Stavový priestor väčšiny hier je
+                    natoľko veľký, že klasické symbolické prístupy umelej
+                    inteligencie ho nedokážu efektívne prehľadávať. Preto je
+                    zaujímavé skúmať možnosť emergencie stratégie hry pri učení
+                    posilňovaním s využitím hlbokých architektúr neurónových
+                    sietí.
+                </p>
+
+                <h3>Cieľ práce</h3>
+                <p>
+                    Preskúmajte existujúce prístupy učenia posilňovaním a
+                    vybraný prístup aplikujte na zvolenú hru. Zamerajte sa na
+                    rýchlosť učenia a kvalitu nájdenej stratégie.
+                </p>
+            </section>
+
+            <section id="weekly-updates">
+                <h2>Denník</h2>
+                <h3>03.02.2025 - 09.02.2025</h3>
+                <ul>
+                    <li>
+                        Mal som meeting so skolitelom, kde sme prebrali plan a
+                        strukturu bp
+                    </li>
+                    <li>
+                        Zacal som citat
+                        <a href="#sutton2018reinforcement">
+                            Reinforcement learning: An introduction</a
+                        >
+                    </li>
+                    <li>Prezeral som dalsie materialy k RL</li>
+                </ul>
+
+                <h3>10.02.2025 - 16.02.2025</h3>
+                <ul>
+                    <li>
+                        Pokracoval som v citani
+                        <a href="#sutton2018reinforcement">
+                            Reinforcement learning: An introduction</a
+                        >
+                    </li>
+                    <li>Vyhladaval som frameworky, API a dalsie tools</li>
+                    <li>Vyhladaval som prace pre sekciu related work</li>
+                </ul>
+
+                <h3>17.02.2025 - 23.02.2025</h3>
+                <ul>
+                    <li>Pozeral som prace zo sekcie related work</li>
+                    <li>Experimentoval som s environment interfaceami</li>
+                    <li>Pisal som sekciu o environment interfaceoch</li>
+                </ul>
+
+                <h3>24.02.2025 - 02.03.2025</h3>
+                <ul>
+                    <li>Vytvoril som web stranku pre bakalarsky seminar</li>
+                    <li>
+                        Pokracoval som s oboznavanim sa s frameworkami a env
+                        interfaceami
+                    </li>
+                    <li>Pisal som sekciu related work</li>
+                </ul>
+                <h3>03.03.2025 - 09.03.2025</h3>
+                <ul>
+                    <li>Skumal som pokrocilejsie algoritmy</li>
+                    <li>Skusal som tieto algoritmy</li>
+                </ul>
+                <h3>10.03.2025 - 16.03.2025</h3>
+                <ul>
+                    <li>Studoval som algoritmus SD-SAC</li>
+                    <li>
+                        Hladal som implementacie SAC, ktore by som mohol pouzit
+                        ako zaklad
+                    </li>
+                </ul>
+                <h3>17.03.2025 - 23.03.2025</h3>
+                <ul>
+                    <li>
+                        Skumal som cloudove riesenia pre beh treningu agenta (MS
+                        Azure, Google Colab, Kaggle).
+                    </li>
+                    <li>
+                        Ako zaklad algoritmu som pouzil implementaciu
+                        diskretneho SACu kniznice
+                        <a href="https://github.com/vwxyzjn/cleanrl">CleanRL</a
+                        >.
+                    </li>
+                    <li>
+                        Doplnil som do tejto implementacie navhrnute vylepsenia
+                        <a href="https://arxiv.org/abs/2209.10081">(SD-SAC)</a>.
+                    </li>
+                    <li>Testoval som mnou implementovane tieto vylepsenia</li>
+                    <li>
+                        Hladal som chyby v mojej implementacii tychto vylepseni
+                    </li>
+                    <li>
+                        Skumal som reward function pre hru Space Invaders v
+                        prostredi Gymnasium
+                    </li>
+                </ul>
+                <h3>24.03.2025 - 30.03.2025</h3>
+                <ul>
+                    <li>
+                        Skusal som rozne reward funkcie: default, inverse,
+                        clipped, rescaled
+                    </li>
+                    <li>
+                        Implementoval som reward wrappers: inverse, rescaled,
+                        life lost penalty
+                    </li>
+                    <li>
+                        Riesil som problemy, ktore vznikli updateom na najnovsie
+                        verzie dependencies
+                    </li>
+                </ul>
+                <h3>31.03.2025 - 06.04.2025</h3>
+                <ul>
+                    <li>
+                        Experimentoval som s nastaveniami environmentu: episodic
+                        life a life loss penalty
+                    </li>
+                    <li>Pisal som BP</li>
+                </ul>
+                <h3>07.04.2025 - 13.04.2025</h3>
+                <ul>
+                    <li>
+                        Implementoval a otestoval som paralelizaciu
+                        environmentov
+                    </li>
+                    <li>
+                        Dopisal som sekciu technicka analyza: dodatocne kniznice
+                    </li>
+                    <li>Pisal som kapitolu o zvolenej hre</li>
+                    <li>Pisal som implementacnu kapitolu</li>
+                    <li>Vytvaral som figury pre BP</li>
+                    <li>Pozeral som sa na dalsie vylepsenia: SAC + AE, SEER</li>
+                </ul>
+                <h3>14.04.2025 - 20.04.2025</h3>
+                <ul>
+                    <li>Implementoval som Munchausen RL</li>
+                    <li>Implementoval som SAC+AE</li>
+                    <li>Implementoval som SEER: freezovanie enkoderov</li>
+                </ul>
+                <h3>21.04.2025 - 27.04.2025</h3>
+                <ul>
+                    <li>Implementoval som SEER</li>
+                    <li>Dopisal som implementacnu kapitolu</li>
+                </ul>
+                <h3>28.04.2025 - 04.05.2025</h3>
+                <ul>
+                    <li>Bug fixoval som implementaciu SEER</li>
+                    <li>Pustal som experimenty</li>
+                    <li>Upravil som implementacnu kapitolu</li>
+                    <li>Dopisal som kapitolu o existujucich rieseniach</li>
+                    <li>Pisal som kapitolu o zvolenej metode</li>
+                </ul>
+                <h3>05.05.2025 - 11.05.2025</h3>
+                <ul>
+                    <li>
+                        Dopisal som sekciu o zvolenych modifikaciach algoritmu
+                        SAC
+                    </li>
+                    <li>Rozpisal som sekciu o zvolenom algoritme SAC</li>
+                    <li>Spravil som par uprav v implementacii</li>
+                    <li>Testoval som rozne konfiguracie algoritmu</li>
+                    <li>Zbieral som data z testov</li>
+                </ul>
+                <h3>12.05.2025 - 18.05.2025</h3>
+                <ul>
+                    <li>Dopisal som sekciu o algoritme</li>
+                    <li>Pisal som sekciu o vysledkoch</li>
+                    <li>Testoval som rozne konfiguracie algoritmu</li>
+                    <li>Analyzoval som data z testov</li>
+                </ul>
+                <h3>19.05.2025 - 25.05.2025</h3>
+                <ul>
+                    <li>Upravil som BP podla spatnej vazby od skolitela</li>
+                    <li>Spustal a analyzoval som posledne testy</li>
+                </ul>
+                <h3>19.05.2025 - 01.06.2025</h3>
+                <ul>
+                    <li>Dopisal som BP</li>
+                </ul>
+                <h3>02.06.2025 - 05.06.2025</h3>
+                <ul>
+                    <li>Finalne upravy</li>
+                </ul>
+            </section>
+
+            <section id="work">
+                <h2>Práca</h2>
+                <video controls autoplay loop muted style="max-width: 100%">
+                    <source src="media/rl-video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <br />
+                <img
+                    src="media/returns.png"
+                    alt="episodic returns"
+                    style="max-width: 100%"
+                />
+                <br />
+                <img
+                    src="media/lengths.png"
+                    alt="episodic lengths"
+                    style="max-width: 100%"
+                />
+                <br />
+                <a href="https://github.com/Juraj326/rl-atari"
+                    >GitHub repozitar</a
+                >
+                <br />
+                <a href="media/bp.pdf" download>BP</a>
+                <br />
+                <a href="media/pres.pdf" download>Prezentácia</a>
+            </section>
+
+            <section id="references">
+                <h2>Literatúra</h2>
+                <ul>
+                    <li id="sutton2018reinforcement">
+                        Richard S Sutton. Reinforcement learning: An
+                        introduction. A Bradford Book, 2018.
+                    </li>
+                    <li id="murphy2024reinforcement">
+                        Kevin Murphy. Reinforcement learning: An overview. arXiv
+                        preprint arXiv:2412.05265, 2024.
+                    </li>
+                    <li id="mnih2015human">
+                        Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Andrei
+                        A Rusu, Joel Veness, Marc G Bellemare, Alex Graves,
+                        Martin Riedmiller, Andreas K Fidjeland, Georg Ostrovski,
+                        et al. Human-level control through deep reinforcement
+                        learning. nature, 518(7540):529–533, 2015.
+                    </li>
+                    <li id="martinezdefeating">
+                        Christian L Martinez-Nieves. Defeating the invaders with
+                        deep reinforcement learning.
+                    </li>
+                    <li id="silver2014deterministic">
+                        David Silver, Guy Lever, Nicolas Heess, Thomas Degris,
+                        Daan Wierstra, and Martin Riedmiller. Deterministic
+                        policy gradient algorithms. In International conference
+                        on machine learning, pages 387–395. Pmlr, 2014.
+                    </li>
+                    <li id="hessel2018rainbow">
+                        Matteo Hessel, Joseph Modayil, Hado Van Hasselt, Tom
+                        Schaul, Georg Ostrovski, Will Dabney, Dan Horgan, Bilal
+                        Piot, Mohammad Azar, and David Silver. Rainbow:
+                        Combining improvements in deep reinforcement learning.
+                        In Proceedings of the AAAI conference on artificial
+                        intelligence, volume 32, 2018.
+                    </li>
+                    <li id="hasselt2010double">
+                        Hado Hasselt. Double q-learning. Advances in neural
+                        information processing systems, 23, 2010.
+                    </li>
+                    <li id="schaul2015prioritized">
+                        Tom Schaul, John Quan, Ioannis Antonoglou, and David
+                        Silver. Prioritized experience replay. arXiv preprint
+                        arXiv:1511.05952, 2015.
+                    </li>
+                    <li id="wang2016dueling">
+                        Ziyu Wang, Tom Schaul, Matteo Hessel, Hado Hasselt, Marc
+                        Lanctot, and Nando Freitas. Dueling network
+                        architectures for deep reinforcement learning. In
+                        International conference on machine learning, pages
+                        1995–2003. PMLR, 2016.
+                    </li>
+                    <li id="sutton1988learning">
+                        Richard S Sutton. Learning to predict by the methods of
+                        temporal differences. Machine learning, 3:9–44, 1988.
+                    </li>
+                    <li id="fortunato2017noisy">
+                        Meire Fortunato, Mohammad Gheshlaghi Azar, Bilal Piot,
+                        Jacob Menick, Ian Osband, Alex Graves, Vlad Mnih, Remi
+                        Munos, Demis Hassabis, Olivier Pietquin, et al. Noisy
+                        networks for exploration. arXiv preprint
+                        arXiv:1706.10295, 2017.
+                    </li>
+                    <li id="bellemare2017distributional">
+                        Marc G Bellemare, Will Dabney, and Rémi Munos. A
+                        distributional perspective on reinforcement learning. In
+                        International conference on machine learning, pages
+                        449–458. PMLR, 2017.
+                    </li>
+                    <li id="clark2024beyond">
+                        Tyler Clark, Mark Towers, Christine Evers, and Jonathon
+                        Hare. Beyond the rainbow: High performance deep
+                        reinforcement learning on a desktop pc. arXiv preprint
+                        arXiv:2411.03820, 2024.
+                    </li>
+                    <li id="christodoulou1910soft">
+                        Petros Christodoulou. Soft actor-critic for discrete
+                        action settings. arXiv preprint arXiv:1910.07207, 2019.
+                    </li>
+                    <li id="haarnoja2018soft">
+                        Tuomas Haarnoja, Aurick Zhou, Pieter Abbeel, and Sergey
+                        Levine. Soft actor-critic: Off-policy maximum entropy
+                        deep reinforcement learning with a stochastic actor. In
+                        International conference on machine learning, pages
+                        1861–1870. Pmlr, 2018.
+                    </li>
+                    <li id="zhou2022revisiting">
+                        Haibin Zhou, Zichuan Lin, Junyou Li, Qiang Fu, Wei Yang,
+                        and Deheng Ye. Revisiting discrete soft actor-critic.
+                        arXiv preprint arXiv:2209.10081, 2022.
+                    </li>
+                    <li id="chen2021seer">
+                        Lili Chen, Kimin Lee, Aravind Srinivas, and Pieter
+                        Abbeel. Improving computational efficiency in visual
+                        reinforcement learning via stored embeddings. Advances
+                        in Neural Information Processing Systems,
+                        34:26779–26791, 2021.
+                    </li>
+                    <li id="vieillard2020munchausen">
+                        Nino Vieillard, Olivier Pietquin, and Matthieu Geist.
+                        Munchausen reinforcement learning. Advances in Neural
+                        Information Processing Systems, 33:4235–4246, 2020.
+                    </li>
+                    <li id="yarats2020sacae">
+                        Denis Yarats, Amy Zhang, Ilya Kostrikov, Brandon Amos,
+                        Joelle Pineau, and Rob Fergus. Improving sample
+                        efficiency in model-free reinforcement learning from
+                        images. In Proceedings of the aaai conference on
+                        artificial intelligence, volume 35, pages 10674–10681,
+                        2021.
+                    </li>
+                    <li id="cchspaceinvaders">
+                        The Centre for Computing History. Space invaders.
+                        <a
+                            href="https://www.computinghistory.org.uk/det/329/Space-Invaders/"
+                            >https://www.computinghistory.org.uk/det/329/Space-Invaders/</a
+                        >. Webpage describing the Atari 2600 game Space
+                        Invaders. Reference ID CH329. Accessed: 2025-04-14.
+                    </li>
+                    <li id="atari1980spaceinvaders">
+                        Atari, Inc. Space Invaders Instruction Manual, 1980.
+                        Available at:
+                        <a
+                            href="https://atariage.com/manual_html_page.php?SoftwareLabelID=460"
+                            >https://atariage.com/manual_html_page.php?SoftwareLabelID=460</a
+                        >. Accessed: 2025-04-14.
+                    </li>
+                    <li id="bellemare13arcade">
+                        M. G. Bellemare, Y. Naddaf, J. Veness, and M. Bowling.
+                        The arcade learning environment: An evaluation platform
+                        for general agents. Journal of Artificial Intelligence
+                        Research, 47:253–279, jun 2013.
+                    </li>
+                    <li id="towers2024gymnasium">
+                        Mark Towers, Ariel Kwiatkowski, Jordan Terry, John U
+                        Balis, Gianluca De Cola, Tristan Deleu, Manuel Goulão,
+                        Andreas Kallinteris, Markus Krimmel, Arjun KG, et al.
+                        Gymnasium: A standard interface for reinforcement
+                        learning environments. arXiv preprint arXiv:2407.17032,
+                        2024.
+                    </li>
+                    <li id="1606.01540">
+                        Greg Brockman, Vicki Cheung, Ludwig Pettersson, Jonas
+                        Schneider, John Schulman, Jie Tang, and Wojciech
+                        Zaremba. Openai gym, 2016.
+                    </li>
+                    <li id="stable-retro">
+                        Mathieu Poliquin. Stable retro, a maintained fork of
+                        openai’s gym-retro.
+                        <a
+                            href="https://github.com/Farama-Foundation/stable-retro, 2025"
+                            >https://github.com/Farama-Foundation/stable-retro,
+                            2025</a
+                        >.
+                    </li>
+                    <li id="lanctot2019openspiel">
+                        Marc Lanctot, Edward Lockhart, Jean-Baptiste Lespiau,
+                        Vinicius Zambaldi, Satyaki Upadhyay, Julien Pérolat,
+                        Sriram Srinivasan, Finbarr Timbers, Karl Tuyls, Shayegan
+                        Omidshafiei, et al. Openspiel: A framework for
+                        reinforcement learning in games. arXiv preprint
+                        arXiv:1908.09453, 2019.
+                    </li>
+                    <li id="jun_jet_tai_2023_8140744">
+                        Jun Jet Tai, Mark Towers, and Elliot Tower. Shimmy:
+                        Gymnasium and PettingZoo Wrappers for Commonly Used
+                        Environments, June 2023.
+                    </li>
+                    <li id="raffin2021stable">
+                        Antonin Raffin, Ashley Hill, Adam Gleave, Anssi
+                        Kanervisto, Maximilian Ernestus, and Noah Dormann.
+                        Stable-baselines3: Reliable reinforcement learning
+                        implementations. Journal of Machine Learning Research,
+                        22(268):1–8, 2021.
+                    </li>
+                    <li id="huang2022cleanrl">
+                        Shengyi Huang, Rousslan Fernand Julien Dossa, Chang Ye,
+                        Jeff Braga, Dipam Chakraborty, Kinal Mehta, and João
+                        G.M. Araújo. Cleanrl: High-quality single-file
+                        implementations of deep reinforcement learning
+                        algorithms. Journal of Machine Learning Research,
+                        23(274):1–18, 2022.
+                    </li>
+                    <li id="mlx2023">
+                        Awni Hannun, Jagrit Digani, Angelos Katharopoulos, and
+                        Ronan Collobert. MLX: Efficient and flexible machine
+                        learning on apple silicon, 2023.
+                    </li>
+                    <li id="billot2024benchmark">
+                        Tristan Billot. How fast is mlx? a comprehensive
+                        benchmark on 8 apple silicon chips and 4 cuda gpus.
+                        Towards Data Science, February 2024. Available at:
+                        <a
+                            href="https://towardsdatascience.com/how-fast-is-mlx-a-comprehensive-benchmark-on-8-apple-silicon-chips-and-4-cuda-gpus-378a0ae356a0/"
+                            >https://towardsdatascience.com/how-fast-is-mlx-a-comprehensive-benchmark-on-8-apple-silicon-chips-and-4-cuda-gpus-378a0ae356a0/</a
+                        >. Accessed: 2025-04-09.
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <small>Juraj Povinec, Bakalársky Seminár 2024/2025</small>
+        </footer>
+    </body>
+</html>

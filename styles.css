@@ -1,0 +1,51 @@
+header h1 {
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #191919;
+}
+
+a {
+    text-decoration: none;
+    color: #3b50ea;
+}
+
+main,
+footer {
+    padding: 1em;
+    width: 66%;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    main,
+    footer {
+        width: 90%;
+    }
+}
+
+section {
+    background-color: #ffffff;
+    margin: 1em 0;
+    padding: 0 1em;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #191919;
+        color: #f8f8f8;
+    }
+
+    section {
+        background-color: #252525;
+    }
+}
